@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 //Crud
 //Type
-namespace DataAccess.Repository
+namespace Core.DataAccess
 {
     public interface IEntityRepository<T>
     {

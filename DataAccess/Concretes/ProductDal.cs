@@ -1,6 +1,6 @@
-﻿using DataAccess.Abstracts;
+﻿using Core.DataAccess;
+using DataAccess.Abstracts;
 using DataAccess.Contexts;
-using DataAccess.Repository;
 using Entities.Concretes;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -11,9 +11,9 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concretes
 {
-    public class ProductDal : EfEntityRepositoryBase<Products, ETradeContext>, IProductDal
+    public class ProductDal : EfEntityRepositoryBase<Product, ETradeContext>, IProductDal
     {
-        public List<Products> GetAllWithCategory()
+        public List<Product> GetAllWithCategory()
         {
             using (ETradeContext context = new ETradeContext())
             {
@@ -21,7 +21,7 @@ namespace DataAccess.Concretes
             }
         }
 
-        public List<Products> GetAllWithCategory(string productName)
+        public List<Product> GetAllWithCategory(string productName)
         {
             using (ETradeContext context = new ETradeContext())
             {

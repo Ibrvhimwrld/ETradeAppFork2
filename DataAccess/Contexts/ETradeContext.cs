@@ -12,10 +12,10 @@ namespace DataAccess.Contexts
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=laptop-8c0i0fnb;Database=ETradeDb;Trusted_Connection=True;TrustServerCertificate=True");
+            optionsBuilder.UseSqlServer("Server=laptop-8c0i0fnb;Database=ETradeDb2;Trusted_Connection=True;TrustServerCertificate=True");
         }
 
-        public DbSet<Products> Products { get; set; }
+        public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
     }
 }

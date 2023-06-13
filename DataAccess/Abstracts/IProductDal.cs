@@ -1,4 +1,4 @@
-﻿using DataAccess.Repository;
+﻿using Core.DataAccess;
 using Entities.Concretes;
 using System;
 using System.Collections.Generic;
@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Abstracts
 {
-    public interface IProductDal : IEntityRepository<Products>
+    public interface IProductDal : IEntityRepository<Product>
     {
         //custom operations
         //method overloading
-        List<Products> GetAllWithCategory();
-        List<Products> GetAllWithCategory(string productName);
+        List<Product> GetAllWithCategory();
+        List<Product> GetAllWithCategory(string productName);
     }
 }
